@@ -208,7 +208,7 @@ public class Controller implements Initializable {
             if (currentSongIndex != -1) {
                 PlaylistEntry previousSong = currentPlaylist.songs.get(currentSongIndex);
                 SongItem previousSongItem = (SongItem) songsVBox.lookup("#song-" + previousSong.entryId);
-                previousSongItem.getStyleClass().remove("songHBoxSelected");
+                if (previousSongItem != null) previousSongItem.getStyleClass().remove("songHBoxSelected");
             }
             SongItem currentSongItem = (SongItem) songsVBox.lookup("#song-" + song.entryId);
             currentSongItem.getStyleClass().add("songHBoxSelected");
@@ -572,7 +572,7 @@ public class Controller implements Initializable {
     private void OpenPlaylist(Playlist playlist) {
         if (openedPlaylist != null) {
             PlaylistItem previousPlaylistItem = (PlaylistItem) playlistsVBox.lookup("#playlist-" + openedPlaylist.playlistId);
-            previousPlaylistItem.getStyleClass().remove("playlistHBoxSelected");
+            if (previousPlaylistItem != null) previousPlaylistItem.getStyleClass().remove("playlistHBoxSelected");
         }
         PlaylistItem openedPlaylistItem = (PlaylistItem) playlistsVBox.lookup("#playlist-" + playlist.playlistId);
         openedPlaylistItem.getStyleClass().add("playlistHBoxSelected");
