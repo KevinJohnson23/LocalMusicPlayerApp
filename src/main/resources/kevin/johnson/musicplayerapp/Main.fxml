@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="ap" fx:id="ap" prefHeight="500.0" prefWidth="800.0" styleClass="ap" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevin.johnson.musicplayerapp.Controller">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <children>
+                  <SplitPane dividerPositions="0.3132832080200501" prefHeight="441.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="-Infinity" prefHeight="160.0" prefWidth="247.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <VBox prefHeight="439.0" prefWidth="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox id="playlistsTop" minHeight="-Infinity" prefHeight="42.0" prefWidth="247.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="42.0">
+                                             <children>
+                                                <Button id="createPlaylistButton" fx:id="createPlaylistButton" mnemonicParsing="false" prefHeight="41.0" prefWidth="41.0" styleClass="buttonHover" text="+" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                   <font>
+                                                      <Font size="9.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <tooltip>
+                                                      <Tooltip text="Create playlist" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="41.0" prefWidth="206.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <TextField id="playlistNameInput" fx:id="playlistNameInput" prefHeight="45.0" prefWidth="206.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </TextField>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ScrollPane id="playlistsSP" fx:id="playlistsSP" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="398.0" prefWidth="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <VBox id="playlistsVBox" fx:id="playlistsVBox" prefHeight="396.0" prefWidth="245.0" spacing="2.0" />
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="400.0" prefHeight="428.0" prefWidth="545.0">
+                           <children>
+                              <VBox prefHeight="439.0" prefWidth="545.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox id="songsTop" minHeight="-Infinity" prefHeight="42.0" prefWidth="547.0">
+                                       <children>
+                                          <AnchorPane minWidth="0.0" prefHeight="32.0" prefWidth="224.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label id="playlistNameSongs" fx:id="playlistNameSongs" prefHeight="34.0" prefWidth="326.0" text="Playlist Name" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minWidth="0.0" prefHeight="32.0" prefWidth="134.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <TextField id="songNameInput" fx:id="songNameInput" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="22.0" prefWidth="197.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="TEXT" />
+                                                   </cursor>
+                                                </TextField>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="42.0" HBox.hgrow="NEVER">
+                                             <children>
+                                                <Button id="addSongButton" fx:id="addSongButton" mnemonicParsing="false" prefHeight="41.0" prefWidth="41.0" styleClass="buttonHover" text="+" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                   <font>
+                                                      <Font size="5.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <tooltip>
+                                                      <Tooltip text="Add song" />
+                                                   </tooltip>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="songsColumns" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="547.0">
+                                       <children>
+                                          <AnchorPane fx:id="songsColumnTitle" styleClass="songsColumnContainer" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="248.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <AnchorPane HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="22.0" prefWidth="248.0" styleClass="songsColumnTitle" text="Title" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" />
+                                                               </padding>
+                                                               <font>
+                                                                  <Font size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane HBox.hgrow="NEVER">
+                                                         <children>
+                                                            <ImageView id="songsColumnTitleArrow" fx:id="songsColumnTitleArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="8.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="songsColumnArtist" styleClass="songsColumnContainer" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="26.0" prefWidth="222.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <AnchorPane HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label prefHeight="22.0" prefWidth="248.0" styleClass="songsColumnTitle" text="Artist" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <font>
+                                                                  <Font size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane HBox.hgrow="NEVER">
+                                                         <children>
+                                                            <ImageView id="songsColumnArtistArrow" fx:id="songsColumnArtistArrow" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="8.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minWidth="60.0" styleClass="songsColumnContainer" HBox.hgrow="NEVER">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="22.0" prefWidth="98.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <BorderPane HBox.hgrow="ALWAYS">
+                                                         <center>
+                                                            <ImageView id="songsColumnDurationImage" fx:id="songsColumnDurationImage" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@images/duration.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="34.0" HBox.hgrow="NEVER">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
+                                    <ScrollPane id="songsSP" fx:id="songsSP" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="408.0" prefWidth="545.0" VBox.vgrow="ALWAYS">
+                                       <content>
+                                          <VBox id="songsVBox" fx:id="songsVBox" prefHeight="396.0" prefWidth="547.0" spacing="2.0" />
+                                       </content>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <HBox id="playerHBox" fx:id="playerHBox" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="59.0" prefWidth="800.0" styleClass="playerHBox" VBox.vgrow="NEVER">
+               <children>
+                  <AnchorPane maxWidth="350.0" minWidth="59.0" prefHeight="59.0" prefWidth="222.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView id="playerSongImage" fx:id="playerSongImage" fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane layoutX="65.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label id="playerSongName" fx:id="playerSongName" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="141.0" text="Song Name" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label id="playerArtistName" fx:id="playerArtistName" alignment="TOP_LEFT" layoutY="33.0" prefHeight="25.0" prefWidth="141.0" text="Artist Name" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minWidth="320.0" prefWidth="396.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <BorderPane prefHeight="62.0" prefWidth="396.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <bottom>
+                              <StackPane prefHeight="27.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <AnchorPane>
+                                       <children>
+                                          <ProgressBar id="playerPlaybarProgress" fx:id="playerPlaybarProgress" prefHeight="18.0" prefWidth="363.0" progress="0.8" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="2.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <Slider id="playerPlaybarSlider" fx:id="playerPlaybarSlider" blockIncrement="0.05" layoutY="1.0" max="1.0" prefHeight="14.0" prefWidth="396.0" value="0.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </StackPane>
+                           </bottom>
+                           <right>
+                              <Label fx:id="playerSongTime" alignment="BOTTOM_RIGHT" prefHeight="33.0" prefWidth="78.0" styleClass="playerSongTime" text="2:30 / 3:43" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets right="23.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </right>
+                        </BorderPane>
+                        <AnchorPane layoutX="155.0" layoutY="6.0" prefHeight="37.0" prefWidth="396.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="5.0" prefHeight="59.0" prefWidth="396.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button id="playerShuffle" fx:id="playerShuffle" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="buttonHover">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <tooltip>
+                                          <Tooltip text="Shuffle playlist" />
+                                       </tooltip>
+                                       <graphic>
+                                          <ImageView id="shuffleButtonImage" fx:id="shuffleButtonImage" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Kevin%20Johnson/OneDrive/Documents/Coding/Java/MusicPlayer/src/images/shuffle_disabled.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="playerBackward" fx:id="playerBackward" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: rgba(0,0,0,0);" styleClass="buttonHover">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <tooltip>
+                                          <Tooltip text="Previous song" />
+                                       </tooltip>
+                                       <graphic>
+                                          <ImageView id="previousButtonImage" fx:id="previousButtonImage" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Kevin%20Johnson/OneDrive/Documents/Coding/Java/MusicPlayer/src/images/previous.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="playerPlay" fx:id="playerPlay" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="buttonHover">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <tooltip>
+                                          <Tooltip text="Play/Pause" />
+                                       </tooltip>
+                                       <graphic>
+                                          <ImageView id="playButtonImage" fx:id="playButtonImage" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/play.png" />
+                                             </image></ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="playerForward" fx:id="playerForward" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="buttonHover">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <tooltip>
+                                          <Tooltip text="Next song" />
+                                       </tooltip>
+                                       <graphic>
+                                          <ImageView id="nextButtonImage" fx:id="nextButtonImage" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Kevin%20Johnson/OneDrive/Documents/Coding/Java/MusicPlayer/src/images/next.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="playerLoop" fx:id="playerLoop" layoutX="151.0" layoutY="16.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="buttonHover">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <tooltip>
+                                          <Tooltip text="Loop song" />
+                                       </tooltip>
+                                       <graphic>
+                                          <ImageView id="loopButtonImage" fx:id="loopButtonImage" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="file:/C:/Users/Kevin%20Johnson/OneDrive/Documents/Coding/Java/MusicPlayer/src/images/loop_disabled.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets top="2.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="350.0" minWidth="130.0" prefHeight="59.0" prefWidth="196.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button id="playerMute" fx:id="playerMute" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" styleClass="buttonHover" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip text="Mute song" />
+                           </tooltip>
+                           <graphic>
+                              <ImageView id="muteButtonImage" fx:id="muteButtonImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/unmuted.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <StackPane layoutX="54.0" layoutY="21.0" prefHeight="31.0" prefWidth="128.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="20.0">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <ProgressBar id="playerVolumeProgress" fx:id="playerVolumeProgress" prefHeight="18.0" prefWidth="120.0" progress="1.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="8.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Slider id="playerVolumeSlider" fx:id="playerVolumeSlider" blockIncrement="0.05" layoutY="1.0" max="1.0" value="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Slider>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

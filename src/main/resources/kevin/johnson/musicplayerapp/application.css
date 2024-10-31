@@ -1,0 +1,266 @@
+.root {
+    -darkest-shade : #181926;
+    -dark-shade : #1a1c29;
+    -medium-shade : #1e202f;
+    -light-shade : #242739;
+    -lighter-shade : #2c2f42;
+    -lightest-shade : #cad4f4;
+    -highlight-shade : #dae3ff;
+    -disabled-shade : #8891b0;
+    -accent-color : #94d8e2;
+    -text-primary-color : white;
+    -text-secondary-color : -lightest-shade;
+    -default-shadow : dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+    -default-glow : dropshadow(gaussian, -accent-color, 20, 0.5, 0.0, 0.0);
+}
+
+* {
+    -fx-font-family : "Verdana";
+    -fx-border-width : 0;
+    -fx-border-color : transparent;
+    -fx-effect : none;
+    -fx-background-insets : 0;
+    -fx-padding : 0;
+}
+
+#ap {
+    -fx-background-color : -darkest-shade;
+}
+#playerHBox {
+    -fx-background-color : -darkest-shade;
+}
+.playerHBoxPlayingSong {
+    -fx-effect : -default-glow;
+}
+#playlistsTop, #songsTop {
+    -fx-background-color : -darkest-shade;
+}
+#playlistsVBox, #songsVBox {
+    -fx-background-color : -medium-shade;
+}
+.playlistHBox, .songHBox {
+    -fx-background-color : -light-shade;
+}
+.playlistHBox:hover, .songHBox:hover {
+    -fx-background-color : -lighter-shade;
+}
+.songsColumnContainer:hover {
+    -fx-background-color : -light-shade;
+}
+.playlistHBoxSelected, .songHBoxSelected {
+    -fx-background-color : -lighter-shade;
+    -fx-border-width : 1;
+    -fx-border-radius : 5;
+    -fx-border-color : -highlight-shade;
+}
+#songsColumns {
+    -fx-background-color : -medium-shade;
+}
+
+.text {
+    -fx-font-smoothing-type : gray;
+}
+
+.text-field {
+    -fx-background-color : -light-shade;
+    -fx-text-fill : -text-primary-color;
+    -fx-highlight-fill : -lightest-shade;
+    -fx-highlight-text-fill : -darkest-shade;
+    -fx-background-radius : 5;
+    -fx-border-width : 2;
+    -fx-border-radius : 4;
+    -fx-border-color : -lighter-shade;
+    -fx-padding : 0 5 0 5;
+    -fx-font-size : 13;
+}
+
+.progress-bar {
+    -fx-background-color : -light-shade;
+    -fx-background-radius : 15;
+    -fx-padding : 3;
+}
+.progress-bar .track {
+    -fx-opacity : 0;
+}
+.progress-bar .bar {
+    -fx-background-color : -accent-color;
+    -fx-background-radius : 15;
+}
+
+.slider > .thumb {
+    -fx-background-color : -text-primary-color;
+    -fx-pref-width : 10;
+    -fx-pref-height : 10;
+}
+.slider > .track {
+    -fx-opacity : 0;
+    -fx-padding : 10;
+}
+
+#playerVolumeProgress .bar {
+    -fx-background-color : -text-primary-color;
+}
+#playerVolumeProgress {
+    -fx-background-color : -lighter-shade;
+    -fx-padding : 0;
+}
+
+#playerPlaybarProgress {
+    -fx-padding : 2;
+}
+#playerPlaybarSlider {
+    -fx-opacity : 0;
+}
+
+.button {
+    -fx-background-color : -lightest-shade;
+    -fx-background-radius : 5;
+    -fx-border-width : 2;
+    -fx-border-radius : 5;
+    -fx-border-color : -highlight-shade;
+    -fx-font-size : 13;
+}
+.button:hover {
+    -fx-background-color : -highlight-shade;
+}
+
+#playerBackward, #playerForward, #playerShuffle, #playerLoop, #playerMute {
+    -fx-background-color : transparent;
+    -fx-border-width : 0;
+}
+
+.split-pane {
+    -color-split-divider : -darkest-shade;
+    -fx-background-insets : 0;
+    -fx-padding : 0;
+}
+.split-pane > .split-pane-divider {
+    -fx-padding : 0 2 0 2;
+    -fx-background-color : -darkest-shade;
+}
+.split-pane > .split-pane-divider > .horizontal-grabber {
+    -fx-opacity : 0;
+}
+.split-pane > .split-pane-divider:pressed {
+    -fx-background-color : -lightest-shade;
+    -fx-effect : -default-shadow;
+}
+.split-pane > .split-pane-divider:hover {
+    -fx-background-color : -lightest-shade;
+    -fx-effect : -default-shadow;
+}
+
+.split-pane {
+    -fx-background-color : transparent;
+}
+
+.label {
+    -fx-text-fill : -text-primary-color;
+}
+
+.scroll-bar {
+  -fx-background-color : -light-shade;
+}
+.scroll-bar > .thumb {
+  -fx-background-color : -lightest-shade;
+  -fx-background-radius : 5;
+}
+.scroll-bar > .track {
+  -fx-background-color : transparent;
+  -fx-border-radius : 0;
+}
+.scroll-bar:horizontal {
+  -fx-pref-height : 6;
+}
+.scroll-bar:vertical {
+  -fx-pref-width : 6;
+}
+
+#playlistNameSongs {
+    -fx-font-size : 20;
+}
+.songsColumnTitle {
+    -fx-font-size : 15;
+}
+.songName, .songArtistName, .songDuration {
+    -fx-font-size : 18;
+}
+#playerSongName {
+    -fx-font-size : 18;
+}
+#playerArtistName {
+    -fx-font-size : 13;
+}
+.playlistSongCount {
+    -fx-font-size : 11;
+}
+.playlistName {
+    -fx-font-size : 16;
+}
+.playlistNameField {
+    -fx-font-size : 16;
+    -fx-padding : 0;
+    -fx-background-color : -medium-shade;
+}
+
+.context-menu {
+  -fx-background-color : -lighter-shade, -dark-shade;
+  -fx-background-insets : 0, 1;
+  -fx-padding : 5 5 5 5;
+  -fx-background-radius : 4;
+  -fx-effect : -default-shadow;
+}
+.menu-item {
+    -fx-text-fill : -text-primary-color;
+    -fx-background-color : transparent;
+}
+.menu-item:hover > .label {
+    -fx-background-color : -accent-color;
+    -fx-text-fill : -darkest-shade;
+}
+
+.dialog-pane {
+    -fx-background-color : -light-shade;
+    -fx-effect : -default-shadow;
+    -fx-border-width : 0;
+    -fx-padding : 10 10 5 10;
+}
+.dialog-pane .content {
+    -fx-font-size : 15;
+    -fx-text-fill : -text-primary-color;
+    -fx-padding : 10 0 15 0;
+}
+.dialog-pane .header-panel {
+    -fx-background-color : -light-shade;
+    -fx-font-size : 17;
+    -fx-text-fill : -text-primary-color;
+}
+.button-bar .button {
+    -fx-background-color : -lightest-shade;
+    -fx-background-radius : 5;
+    -fx-border-width : 2;
+    -fx-border-radius : 5;
+    -fx-border-color : -highlight-shade;
+    -fx-font-size : 13;
+}
+.button-bar .button:hover {
+    -fx-background-color : -highlight-shade;
+}
+
+.tooltip {
+    -fx-background-color : -light-shade;
+    -fx-text-fill : -text-primary-color;
+    -fx-background-radius : 8;
+    -fx-background-insets : 0;
+    -fx-padding : 3 5 3 5;
+    -fx-effect : -default-shadow;
+    -fx-font-size : 14;
+    -fx-border-width : 1;
+    -fx-border-radius : 9;
+    -fx-border-color : -lighter-shade;
+}
+
+.buttonHover:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
